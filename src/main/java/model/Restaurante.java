@@ -14,7 +14,9 @@ public final class Restaurante extends Empresa {
     public Restaurante(String nome, String endereco, String cidade,
             String estado, String cep, String fone,
             String tipoComida, double precoMedio) {
+        
         super(nome, endereco, cidade, estado, cep, fone);
+       
         setTipoComida(tipoComida);
         setPreçoMedio(precoMedio);
     }
@@ -37,8 +39,9 @@ public final class Restaurante extends Empresa {
     @Override
     public void leitura(){
         super.leitura();
+        
         setTipoComida(JOptionPane.showInputDialog("Tipo de Comida:"));
-        setPreçoMedio(Double.parseDouble(JOptionPane.showInputDialog("")));
+        setPreçoMedio(Double.parseDouble(JOptionPane.showInputDialog("Preço Medio")));
     }
     @Override
     public void imprimir(){

@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 public class Empresa {
 
     private String nome;
+
     private String endereco;
     private String cidade;
     private String estado;
@@ -14,6 +15,7 @@ public class Empresa {
     public Empresa() {
         this("", "", "", "", "", "");
     }
+
     public Empresa(String nome, String endereco, String cidade, String estado, String cep, String fone) {
         this.nome = nome;
         this.endereco = endereco;
@@ -22,7 +24,7 @@ public class Empresa {
         this.cep = cep;
         this.fone = fone;
     }
-    
+
     public String getNome() {
         return nome;
     }
@@ -70,20 +72,23 @@ public class Empresa {
     public void setFone(String fone) {
         this.fone = fone;
     }
-public void leitura(){
-		setNome(JOptionPane.showInputDialog("Nome:"));
-		setEndereco(JOptionPane.showInputDialog("Endereco:"));
-		setCidade(JOptionPane.showInputDialog("Cidade:"));
-		setEstado(JOptionPane.showInputDialog("Estado:"));
-		setCep(JOptionPane.showInputDialog("Cep:"));
-		setFone(JOptionPane.showInputDialog("Fone:"));
+
+    public void leitura() {
+        setNome(JOptionPane.showInputDialog("Nome:"));
+        setEndereco(JOptionPane.showInputDialog("Endereco:"));
+        setCidade(JOptionPane.showInputDialog("Cidade:"));
+        setEstado(JOptionPane.showInputDialog("Estado:"));
+        setCep(JOptionPane.showInputDialog("Cep:"));
+        setFone(JOptionPane.showInputDialog("Fone:"));
     }
-public String paraString(){
-		return ("Nome: " + getNome() + "\nEndereco: " + getEndereco() + "\nCidade: " + getCidade() +
-				"\nEstado: " + getEstado() + "\nCep: " + getCep() + "\nFone: " + getFone());
-	}
-public void imprimir(){
-		JOptionPane.showMessageDialog(null, paraString());
+
+    public String paraString() {
+        return ("Nome: " + getNome() + "\nEndereco: " + getEndereco() + "\nCidade: " + getCidade()
+                + "\nEstado: " + getEstado() + "\nCep: " + getCep() + "\nFone: " + getFone());
+    }
+
+    public void imprimir() {
+        JOptionPane.showMessageDialog(null, paraString());
 
     }
 }
